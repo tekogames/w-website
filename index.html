@@ -26,8 +26,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 6vh 20px;
+            justify-content: flex-end;
+            padding: 6vh 20px 72px;
             background-color: #000;
             color: #fff;
             font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -41,7 +41,7 @@
             content: "";
             position: fixed;
             inset: 0;
-            background: url("images/bg.png") center center / cover no-repeat;
+            background: url("images/bg.png") center 28% / cover no-repeat;
             z-index: -2;
         }
 
@@ -59,12 +59,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 32px;
-            max-width: 720px;
+            gap: 24px;
+            max-width: 640px;
+        }
+
+        .blurb {
+            margin: 0;
+            font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+            line-height: 1.6;
+            color: #e8e8e8;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
         }
 
         .logo {
-            width: min(90vw, 640px);
+            width: min(82vw, 540px);
             height: auto;
             filter: drop-shadow(0 4px 24px rgba(0,0,0,0.8));
         }
@@ -119,6 +127,7 @@
     <main>
         <img class="logo" src="images/logo.png" alt="Wraithmind: Escape the THK58">
         <p class="tagline">In development</p>
+        <p class="blurb">Sara Himura has just come aboard the THK58, a ship bound for a distant colony. The journey will not go as expected. Play as Sara and uncover the secrets of the THK58, and of Sara herself, in a game that blends visual novel storytelling with third-person combat.</p>
         <a class="cta" href="https://tekogames.itch.io/wraithmind-escape-the-thk58">View on itch.io</a>
     </main>
 
