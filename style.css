@@ -152,3 +152,124 @@ footer {
 footer a {
     color: inherit;
 }
+
+/* Press kit: long scrolling page with left-aligned content */
+body.presskit {
+    justify-content: flex-start;
+    text-align: left;
+    padding-bottom: 32px;
+}
+
+body.presskit main {
+    max-width: 880px;
+    width: 100%;
+    gap: 20px;
+}
+
+body.presskit footer {
+    position: static;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.pk-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.pk-section {
+    width: 100%;
+    padding: 24px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+    color: #e8e8e8;
+}
+
+.pk-section h2 {
+    margin: 0 0 14px;
+    padding-left: 12px;
+    border-left: 3px solid #e23b2e;
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.pk-section p { margin: 0 0 12px; }
+.pk-section p:last-child { margin-bottom: 0; }
+.pk-section ul { margin: 0; padding-left: 20px; }
+
+.pk-section a {
+    color: #ff6b5e;
+    overflow-wrap: anywhere;
+}
+
+.pk-facts {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px 24px;
+    margin: 0;
+}
+
+.pk-facts dt {
+    color: #aaa;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-top: 2px;
+}
+
+.pk-facts dd { margin: 0; }
+
+.pk-video {
+    aspect-ratio: 16 / 9;
+    margin-bottom: 10px;
+}
+
+.pk-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 4px;
+}
+
+.pk-note {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.pk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+}
+
+.pk-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pk-grid a:hover img {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(226, 59, 46, 0.5);
+}
+
+.pk-asset { text-decoration: none; }
+.pk-asset img { object-fit: contain; background: rgba(255, 255, 255, 0.05); }
+.pk-asset span { display: block; margin-top: 6px; font-size: 0.85rem; }
+
+@media (max-width: 560px) {
+    body.presskit { padding: 124px 16px 32px; }
+    .pk-section { padding: 18px 16px; }
+    .pk-facts { grid-template-columns: 1fr; gap: 2px; }
+    .pk-facts dd { margin-bottom: 10px; }
+}
