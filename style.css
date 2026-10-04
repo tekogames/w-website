@@ -327,7 +327,7 @@ body.hero-top::after {
 
 body.hero-top .logo {
     width: var(--logo-w);
-    margin-bottom: max(0px, calc(var(--H) * 0.45 - var(--pt) - var(--logo-w) * 0.3375 - 24px));
+    margin-bottom: max(0px, calc(var(--H) * var(--content-at, 0.45) - var(--pt) - var(--logo-w) * var(--logo-ratio, 0.3375) - 24px));
 }
 
 body.hero-top .tagline,
@@ -354,4 +354,17 @@ body.hero-top footer {
     body.hero-top .nav { padding: 8px 8px; gap: 4px; }
     body.hero-top .nav a { padding: 6px 8px; font-size: 0.68rem; letter-spacing: 0.04em; }
     body.hero-top { --pt: 56px; }
+}
+
+/* Wraithmind (original) page: logo PNG has transparent padding, so crop it to the lettering.
+   Her face sits higher in this art, so content starts lower. */
+body.hero-top.hero-w {
+    --logo-w: min(78vw, 440px);
+    --logo-ratio: 0.2258;
+    --content-at: 0.62;
+}
+
+body.hero-top.hero-w .logo {
+    aspect-ratio: 1280 / 289;
+    object-fit: cover;
 }
