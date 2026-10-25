@@ -457,3 +457,84 @@ body.home footer {
     body.home .nav a { padding: 6px 8px; font-size: 0.68rem; letter-spacing: 0.04em; }
     .game-card { flex-basis: 100%; min-height: 520px; }
 }
+
+/* Home page: series introduction above the game cards */
+.about {
+    flex: 1 1 100%;
+    max-width: 820px;
+    margin: 8px auto 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    line-height: 1.65;
+    color: #e8e8e8;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.about p { margin: 0; }
+
+.about-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #e23b2e;
+}
+
+.about h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 4.6vw, 2.4rem);
+    line-height: 1.2;
+    color: #fff;
+}
+
+.about-lead {
+    font-size: clamp(1rem, 2.4vw, 1.15rem);
+    color: #fff;
+}
+
+.about-facts {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+    text-align: left;
+}
+
+.about-facts li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 3px solid #e23b2e;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.6);
+    text-shadow: none;
+}
+
+.about-facts .k {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.about-facts .v {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about-facts .d {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #d0d0d0;
+}
+
+.about-more {
+    font-size: 0.95rem;
+    color: #d0d0d0;
+}
