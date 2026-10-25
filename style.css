@@ -493,39 +493,8 @@ body.home footer {
     color: #fff;
 }
 
-.about-facts {
-    list-style: none;
-    margin: 4px 0 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 10px;
-    text-align: left;
-}
 
-.about-facts li {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 10px 14px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-left: 3px solid #e23b2e;
-    border-radius: 4px;
-    background: rgba(0, 0, 0, 0.6);
-    text-shadow: none;
-}
 
-.about-facts .k {
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #aaa;
-}
 
-.about-facts .v {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
-}
 
 
